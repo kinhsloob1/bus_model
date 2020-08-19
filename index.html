@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bus Model</title>
+    <link rel="stylesheet" href="./assets/css/bus.css" />
+  </head>
+  <body>
+    <div class="bus">
+      <div class="row first">
+        <span class="seat disabled">driver (1)</span>
+        <span class="seat">2</span>
+      </div>
+      <div class="row second">
+        <span class="seat">3</span>
+        <span class="seat">4</span>
+        <span class="seat move-right">5</span>
+      </div>
+      <div class="row third">
+        <span class="seat">6</span>
+        <span class="seat">7</span>
+        <span class="seat move-right">8</span>
+      </div>
+      <div class="row fourth">
+        <span class="seat">9</span>
+        <span class="seat selected">10 (taken seat)</span>
+        <span class="seat">11</span>
+        <span class="seat">12</span>
+      </div>
+    </div>
+    <div class="screen">
+      <span class="text">You have selected seat :-</span>
+      <span class="value"></span>
+    </div>
+  </body>
+
+  <script src="./assets//js/index.js"></script>
+</html>

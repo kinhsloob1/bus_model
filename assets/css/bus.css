@@ -1,0 +1,83 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  box-sizing: border-box;
+  margin: initial;
+  padding: initial;
+}
+
+.screen {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+}
+
+.screen > .value {
+  font-weight: 900;
+}
+
+.bus {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+.bus > .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.bus > .row:not(:first-child) {
+  margin-top: 30px;
+}
+
+.bus > .row > .seat {
+  display: inline-flex;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(180, 180, 180);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.bus > .row > .seat:not(:first-child) {
+  margin-left: 20px;
+}
+
+.bus:not(.disabled) > .row > .seat:not(.disabled):not(.selected):hover,
+.bus:not(.disabled) > .row > .seat:not(.disabled):not(.selected):focus {
+  background-color: rgb(140, 140, 140);
+}
+
+.bus.disabled > .row > .seat,
+.bus:not(.disabled) > .row > .seat.disabled {
+  cursor: initial;
+  background-color: rgb(230, 230, 230);
+}
+
+.bus > .row > .seat.selected,
+.bus > .row > .seat.selected:hover,
+.bus > .row > .seat.selected:focus {
+  cursor: initial;
+  background-color: rgb(17, 183, 212);
+}
+
+.bus > .row > .seat.selected.editable {
+  cursor: pointer;
+}
